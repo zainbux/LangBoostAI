@@ -9,6 +9,7 @@ export interface ITranslation extends Document {
   from: string;
   toText: string;
   to: string;
+  _id: string;
 }
 
 interface IUser extends Document {
