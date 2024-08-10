@@ -8,7 +8,7 @@ function Header() {
     const { userId } = auth();
 
     const url = `${
-        process.env.NODE_ENV === "development"
+        process.env.NODE_ENV === "production"
           ? "http://localhost:3000"
           : process.env.VERCEL_URL
       }/translate`;
