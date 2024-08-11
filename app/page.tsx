@@ -10,7 +10,7 @@ export default async function Home() {
   const url = `${
     process.env.NODE_ENV === "development"
       ? "http://localhost:3000"
-      : `https://${process.env.VERCEL_URL}`
+      : `https://lang-learn-git-main-zainbux99gmailcoms-projects.vercel.app`
   }/translate`;
   
 
