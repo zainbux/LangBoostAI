@@ -8,10 +8,11 @@ function Header() {
     const { userId } = auth();
 
     const url = `${
-        process.env.NODE_ENV === "production"
+        process.env.NODE_ENV === "development"
           ? "http://localhost:3000"
-          : process.env.VERCEL_URL
+          : `https://${process.env.VERCEL_URL}`
       }/translate`;
+      
 
   return (
     <header className='flex items-center justify-between px-8 border-b mb-5'>

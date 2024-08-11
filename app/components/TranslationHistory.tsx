@@ -13,10 +13,11 @@ async function TranslationHistory() {
   const { userId } = auth();
 
   const url = `${
-    process.env.NODE_ENV === "production"
+    process.env.NODE_ENV === "development"
       ? "http://localhost:3000"
-      : process.env.VERCEL_URL
+      : `https://${process.env.VERCEL_URL}`
   }/api/translationHistory?userId=${userId}`;
+  
 
   const response = await fetch(url, {
     next: {

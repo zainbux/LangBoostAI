@@ -8,10 +8,11 @@ export default async function Home() {
   const { userId } = auth();
 
   const url = `${
-    process.env.NODE_ENV === "production"
+    process.env.NODE_ENV === "development"
       ? "http://localhost:3000"
-      : process.env.VERCEL_URL
+      : `https://${process.env.VERCEL_URL}`
   }/translate`;
+  
 
   return (
     <main className="flex flex-col items-center justify-center p-10">
