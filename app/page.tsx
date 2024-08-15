@@ -17,14 +17,15 @@ export default async function Home() {
   return (
     <main className="flex flex-col items-center justify-center p-10">
       <h1 className="text-3xl lg:text-6xl text-center pb-10 mb-5 font-light">
-        Understand your world and communicate across languages
+        LangLearn will teach you to speak to anyone, with the power of AI
       </h1>{" "}
       <Image
-        src=""
+        src="/main.jpg"
         alt="logo"
-        width={700}
-        height={700}
+        width={400}
+        height={400}
       />
+
       {userId ? (
         <Link
           href="/translate"
@@ -39,6 +40,21 @@ export default async function Home() {
           </SignInButton>
         </Button>
       )}
+
+      {userId ? (
+        <Link
+          href="/"
+          className="bg-blue-500  w-full mt-10 lg:w-fit p-5 rounded-md text-white text-center "
+        >
+          Vocabulary Deck
+        </Link>
+      ) : (
+        <Button className="bg-blue-500 hover:bg-blue-600 w-full mt-10 lg:w-fit p-5">
+          <SignInButton forceRedirectUrl={url} mode="modal">
+            Sign In to Start Learning
+          </SignInButton>
+        </Button>
+      )}  
     </main>
   );
 }

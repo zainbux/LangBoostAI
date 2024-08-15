@@ -18,7 +18,7 @@ function Header() {
     <header className='flex items-center justify-between px-8 border-b mb-5'>
         <div className='flex items-center justify-center h-20 overflow-hidden'>
             <Link href="/" className='font-bold text-2xl p-10 text-cyan-700'>
-                Translate <span className='text-emerald-500'>AI</span>
+                Lang <span className='text-emerald-500'>Learn</span>
             </Link>
         </div>
         {userId ? (
