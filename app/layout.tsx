@@ -9,11 +9,12 @@ import {
   UserButton
 } from '@clerk/nextjs'
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Translate-AI",
+  title: "LangBoost-AI",
   description: "",
 };
 
@@ -27,11 +28,13 @@ export default function RootLayout({
       <html lang="en">
         <body className={inter.className}>
           <Header/>
-          <div className="max-w-6xl mx-auto">
+          <div className="max-w-6xl mx-auto min-h-screen flex flex-col flex-grow">
             {children}            
           </div>
-</body>
+          <Footer/>
+        </body>
       </html>
+      
     </ClerkProvider>
   );
 }
